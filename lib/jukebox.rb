@@ -49,14 +49,18 @@ def run(songs)
   puts "Please enter a command:"
   input = gets.strip
   while input != "exit" 
-    puts "Please enter a command:"
-    input = gets.strip
     if input == "list"
       list(songs)
+      puts "Please enter a command:"
+      input = gets.strip
     elsif input == "play"
       play(songs)
+      puts "Please enter a command:"
+      input = gets.strip
     else input == "help"
       help
+      puts "Please enter a command:"
+      input = gets.strip
     end
   end 
   exit_jukebox
