@@ -32,7 +32,7 @@ def play(songs)
   response = gets.strip
   if songs.include?(response)
     puts "Playing #{response}"
-  elsif songs[response.to_i - 1]
+  elsif response.to_i > 0 
     puts "Playing #{songs[response.to_i - 1]}"
   else
     puts "Invalid input, please try again"
