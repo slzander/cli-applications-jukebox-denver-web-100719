@@ -51,7 +51,6 @@ def run(songs)
     input = gets.strip
     if input == "list"
       list(songs)
-      puts "Please enter a command:"
     elsif input == "play"
       play(songs)
     else input == "help"
