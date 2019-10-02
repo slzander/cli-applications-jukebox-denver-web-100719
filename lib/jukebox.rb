@@ -49,6 +49,7 @@ def run(songs)
   input = gets.strip
   while input != "exit" 
     puts "Please enter a command:"
+    
     if input == "list"
       list(songs)
     elsif input == "play"
