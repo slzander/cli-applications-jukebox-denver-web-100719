@@ -30,7 +30,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   response = gets.strip
-  if songs.include?(response)
+  if songs.include?(response) == true
     puts "Playing #{response}"
   elsif songs[response.to_i - 1] == true
     puts "Playing #{songs[response.to_i - 1]}"
