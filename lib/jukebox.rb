@@ -29,29 +29,15 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  user_response = gets.downcase.chomp 
-  
-  if (1..9).to_a.include?(user_response.to_i)
-    puts "Playing #{songs[user_response.to_i - 1]}"
-    elsif songs.include?(user_response)
-    puts "Playing #{user_response}"
-  else 
+  response = gets.strip
+  if songs.include?(response)
+    puts "Playing #{response}"
+  elsif songs[response.to_i - 1]
+    puts "Playing #{songs[response.to_i - 1]}"
+  else
     puts "Invalid input, please try again"
   end 
-end 
-
-
-#def play(songs)
-#  puts "Please enter a song name or number:"
-#  response = gets.strip
-#  if songs.include?(response)
-#    puts "Playing #{response}"
-#  elsif songs[response.to_i - 1]
-#    puts "Playing #{songs[response.to_i - 1]}"
-#  else
-#    puts "Invalid input, please try again"
-#  end 
-#end
+end
 
 
 def exit_jukebox
